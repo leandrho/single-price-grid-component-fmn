@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400..700&display=swap');
+
+:root{
+    --primary-font: "Karla", sans-serif;
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-size: 16px;
+    background-color: var(--Light-Gray);
+    font-family: var(--primary-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 635px;
+    height: 475px;
+    border-radius: 10px;
+    box-shadow: 0px 0.5rem 1rem  hsl(234, 12%, 34%, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    color: white;
+    flex-grow: 1;
+    
+}
+.header{
+    padding: 2.5rem;
+}
+.header__title{
+    font-size: 1.5rem;
+    margin-bottom: 1.8rem;
+    color: var(--Cyan);
+}
+.header__paragraph{
+    margin-bottom: 1rem;
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+}
+.header__text{
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.content__left, .content__right{
+    width: 50%;
+}
+.content__left{
+    background-color: var(--Cyan);
+    padding: 2rem;
+    border-bottom-left-radius: 10px;
+}
+.content__right{
+    background-color: hsl(179, 62%, 43%,0.8);
+    border-bottom-right-radius: 10px;
+    padding: 2rem;
+}
+.content__title{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+.content__price{
+    margin-bottom: 0.625rem;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.content__price span{
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--Light-Gray);
+}
+.content__left__text{
+    margin-bottom: 2rem;
+}
+.content__button{
+    border: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0px 0.5rem 0.5rem  hsl(234, 12%, 34%, 0.2);
+
+}
+.content__right__text{
+    font-size: 15px;
+    color: var(--Light-Gray);
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 660px){
+    .container{
+        width: 90%;
+        height: auto;
+        max-width: 375px;
+        margin-block: 2rem;
+    }
+    .header{
+        padding: 2.5rem 1.5rem;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content__left, .content__right{
+        width: 100%;
+        border-radius: 0;
+    }
+    .content__right{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
